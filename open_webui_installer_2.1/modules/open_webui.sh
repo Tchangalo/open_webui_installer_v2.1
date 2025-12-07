@@ -21,7 +21,6 @@ install_webui() {
     ${SUDO} docker volume rm open-webui || true
     succ "Volume 'open-webui' removed."
   fi
-
   # Deploy Open WebUI container (ollama-backed)
   info "Creating volumes (ollama, open-webui)."
   ${SUDO} docker volume create ollama >/dev/null || true
